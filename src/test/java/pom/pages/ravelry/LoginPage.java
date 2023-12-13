@@ -5,7 +5,7 @@ import pom.pages.Locator;
 
 public class LoginPage {
     public static void openUrl(String url) {
-        Common.setUpChrome(false, 10);
+        Common.setUpChrome(true, 10);
         Common.openUrl(url);
     }
 

@@ -46,6 +46,10 @@ public class Common {
         return getElement(locator).getText();
     }
 
+    public static String getText(WebElement element) {
+        return element.getText();
+    }
+
     public static boolean waitForElementToBeVisible(By locator, int seconds) {
         boolean isVisible;
         int duration = 0;
@@ -63,6 +67,10 @@ public class Common {
             duration++;
         } while (!isVisible || duration / 2 >= seconds);
         return isVisible;
+    }
+
+    public static List<WebElement> getSearchResults(By locator) {
+        return getElements(locator);
     }
 
     private static WebElement getElement(By locator) {
