@@ -6,7 +6,7 @@ import pom.pages.Locator;
 
 public class ProjectPage {
     public static void openUrl(String url) {
-        Common.setUpChrome(true);
+        Common.setUpChrome(true, 10);
         Common.openUrl(url);
     }
 

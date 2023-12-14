@@ -5,7 +5,7 @@ import pom.pages.Locator;
 
 public class PatternPage {
     public static void openUrl(String url) {
-        Common.setUpChrome(false);
+        Common.setUpChrome(true, 10);
         Common.openUrl(url);
     }
 
