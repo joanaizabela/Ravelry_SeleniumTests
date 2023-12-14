@@ -66,6 +66,11 @@ public class ProjectPage {
     }
 
     public static void refreshPage() {
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Common.refreshPage();
     }
 
