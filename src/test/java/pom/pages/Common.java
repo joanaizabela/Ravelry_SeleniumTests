@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import pom.utils.Driver;
 
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Common {

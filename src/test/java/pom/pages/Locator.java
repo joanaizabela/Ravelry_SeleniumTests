@@ -50,9 +50,6 @@ public class Locator {
             public static By buttonSaveThisNote =
                     By.xpath("//button[@class='clicker_v2 clicker_v2--standard ']");
             public static By linkAddNote = By.xpath("//span[contains(text(),'add note')]/..");
-            public static By listStarRatingOverall = By.xpath("//ul[contains(@id,'rating')]");
-            public static By listStarRatingClarity = By.xpath("//ul[contains(@id,'clarity')]");
-            public static By listBarRatingDifficulty = By.xpath("//ul[contains(@id,'difficulty')]");
             public static By starRatingOverall(int rating) {
                 return By.xpath("//ul[contains(@id,'rating')]/li[%d]".formatted(rating));
             }

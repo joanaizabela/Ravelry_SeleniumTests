@@ -67,6 +67,7 @@ public class ProjectTest extends TestBase {
     @Test (dataProvider = "projectPageRating")
     public void ts5_changePatternRatingFromProjectPage(int overallRating, int clarityRating, int difficultyRating) {
         // here if any one of the values provided is 0, no action is taken for that rating type
+        // (to reduce the number of tests and log-ins)
         int expectedOverallRating;
         int expectedClarityRating;
         int expectedDifficultyRating;
