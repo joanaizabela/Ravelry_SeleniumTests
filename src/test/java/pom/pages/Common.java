@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import pom.utils.Driver;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Common {
@@ -20,6 +21,10 @@ public class Common {
 
     public static void openUrl(String url) {
         Driver.getDriver().get(url);
+    }
+
+    public static void refreshPage() {
+        Driver.getDriver().navigate().refresh();
     }
 
     public static void closeWindow() {
@@ -48,6 +53,10 @@ public class Common {
 
     public static String getText(WebElement element) {
         return element.getText();
+    }
+
+    public static void clearText(By locator) {
+        getElement(locator).clear();
     }
 
     public static boolean waitForElementToBeVisible(By locator, int seconds) {
