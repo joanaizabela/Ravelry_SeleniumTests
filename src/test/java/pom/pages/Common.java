@@ -3,6 +3,7 @@ package pom.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import pom.utils.Driver;
 
 import java.time.Duration;
@@ -24,6 +25,10 @@ public class Common {
 
     public static void refreshPage() {
         Driver.getDriver().navigate().refresh();
+    }
+
+    public static void goToUrl(String url) {
+        Driver.getDriver().navigate().to(url);
     }
 
     public static void closeWindow() {
@@ -79,6 +84,11 @@ public class Common {
 
     public static List<WebElement> getSearchResults(By locator) {
         return getElements(locator);
+    }
+
+    public static void hoverOnElement(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(getElement(locator)).perform();
     }
 
     private static WebElement getElement(By locator) {

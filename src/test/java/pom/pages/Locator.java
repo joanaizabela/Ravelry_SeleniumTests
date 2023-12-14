@@ -8,7 +8,9 @@ public class Locator {
             public static By linkFromUserPicture = By.xpath("//a[@class='navigation_v2__avatar__link']");
             public static By linkYarns =
                     By.xpath("//div[@class='navigation_v2__tab navigation_v2__tab-- navigation_v2__tab--dropdown']/a[@href='/yarns']");
-            public static By linkProjectsFromHeader = By.xpath("//a[contains(text(),'my notebook')]");
+            public static By linkMyNotebook = By.xpath("//div[@id='notebook_tab']");
+            public static By linkFavoritesFromDropdown =
+                    By.xpath("//div[@id='notebook_tab']//a[contains(@href,'favorites')]");
         }
         public static class Login {
             public static By inputUsername = By.xpath("//input[@id='user_login']");
@@ -43,6 +45,23 @@ public class Locator {
                 return By.xpath("(//a[@class='notebook_thumbnail__title'])[%d]".formatted(projectIndex));
             }
         }
+        public static class Favorites {
+            public static By buttonRemoveConfirm =
+                    By.xpath("(//a[@class='hover_tool_delete_confirmation__confirm'])");
+            public static By linkPatternTitle(int index) {
+                return By.xpath("(//li[@class='title'])[%s]/a".formatted(index));
+            }
+            public static By divPatternPicture(int index) {
+                return By.xpath("(//div[@class='photo_frame photo_gallery__frame real_photo'])[%s]".formatted(index));
+            }
+            public static By buttonRemoveFavorite(int index) {
+                return By.xpath("(//a[@class='hover_tool_icon hover_tool_delete hover_tool_icon--icon_only'])[%s]"
+                        .formatted(index));
+            }
+            public static By linkPatternNotes(int index) {
+                return By.xpath("(//li[@class='notes'])[%s]".formatted(index));
+            }
+        }
         public static class Project {
             public static By paragraphNotesEntry = By.xpath("//div[@class='markdown__dated_entry']"); // removed /p at end
             public static By textareaNotesEntry =
@@ -65,6 +84,13 @@ public class Locator {
             public static By divPercentageProgress() {
                 return By.xpath("//div[@id='status_view']//div[@class='percentage progress_name']");
             }
+        }
+        public static class Pattern {
+            public static By buttonSaveInFavorites =
+                    By.xpath("//a[@class='favorites_button heartpuff button button_false']");
+            public static By buttonSaveChanges =
+                    By.xpath("//button[@class='clicker_v2 clicker_v2--standard ']");
+            public static By textareaFavoriteNotes = By.xpath("//textarea[@name='comments']");
         }
     }
 }

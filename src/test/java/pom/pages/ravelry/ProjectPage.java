@@ -17,9 +17,9 @@ public class ProjectPage {
     }
 
     public static void openProjectPage(int projectIndex) {
-        boolean isVisible = Common.waitForElementToBeVisible(Locator.Ravelry.Home.linkProjectsFromHeader, 10);
+        boolean isVisible = Common.waitForElementToBeVisible(Locator.Ravelry.Home.linkMyNotebook, 10);
         if (isVisible) {
-            Common.clickOnElement(Locator.Ravelry.Home.linkProjectsFromHeader);
+            Common.clickOnElement(Locator.Ravelry.Home.linkMyNotebook);
         }
         boolean projectsAreVisible = Common.waitForElementToBeVisible(Locator.Ravelry.Projects.linkProjectByIndex(1), 10);
         if (projectsAreVisible) {
