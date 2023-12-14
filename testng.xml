@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Ravelry test suite" parallel="classes" thread-count="4">
+    <test name="Ravelry tests">
+        <classes>
+            <class name="pom.tests.ravelry.LoginTest"/>
+            <class name="pom.tests.ravelry.YarnsTest"/>
+            <class name="pom.tests.ravelry.ProjectTest"/>
+            <class name="pom.tests.ravelry.PatternTest"/>
+        </classes>
+    </test>
+</suite>
